@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  {% include 'bboard/includes/head.html' %}
+</head>
+<body>
+  <header>
+      <h1>Объявления</h1>
+  </header>
+  <nav>
+    {% include 'bboard/includes/navigation.html' %}
+  </nav>
+  <section>
+    {% block content %}
+    {% endblock %}
+  </section>
+</body>
+</html>
