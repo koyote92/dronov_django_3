@@ -3,6 +3,7 @@
   {% for bb in bbs %}
   <div>
     <h2>{{ bb.title }}</h2>
+    <i>{{ bb.get_kind_display }}</i>
     <p>{{ bb.content }}</p>
     <p><a href="{% url 'bboard:by_rubric' bb.rubric.pk %}">
         {{ bb.rubric.name }}</a></p>
